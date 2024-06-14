@@ -12,6 +12,7 @@ const jobs = [{
     <Translate key="p2" text="app.main.jobs.edge.p2" />,
     <Translate key="p3" text="app.main.jobs.edge.p3" />,
   ],
+  skills: ['Javascript', 'HTML', 'CSS', 'Ruby on Rails', 'Backbone', 'Angular', 'React', 'MySQL'],
 }, {
   title: <Translate text="app.main.jobs.ericsson.title" />,
   time: '2013 - 2016',
@@ -22,12 +23,13 @@ const jobs = [{
     <Translate key="p3" text="app.main.jobs.ericsson.p3" />,
     <Translate key="p3" text="app.main.jobs.ericsson.p4" />,
   ],
+  skills: ['Javascript', 'HTML', 'CSS', 'Node', 'Backbone', 'Java'],
 }];
 
-function renderJob(key, { title, time, location, detail }) {
+function renderJob(key, { title, time, location, detail, skills }) {
   return (
     <Grid key={key} item xs={12}>
-      <Job title={title} time={time} location={location} detail={detail} />
+      <Job title={title} time={time} location={location} detail={detail} skills={skills} />
     </Grid>
   );
 }

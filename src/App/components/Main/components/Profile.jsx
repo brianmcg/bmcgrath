@@ -22,13 +22,15 @@ export default function Profile() {
     <section>
       <ParallaxBanner style={parallaxStyle} layers={[{ image: backgroundSrc, speed: -30 }]}>
         <Stack sx={contentStyle}>
-          <Container maxWidth="sm">
-            <Typography gutterBottom color="inherit" variant="h2" align="center">
+          <Container>
+            <Typography gutterBottom color="inherit" variant="h3" align="center">
               <Translate text="app.main.profile.title" />
             </Typography>
-            <Typography color="inherit" variant="body1" align="center">
-              <Translate text="app.main.profile.body" />
-            </Typography>
+            <Container maxWidth="md">
+              <Typography color="inherit" variant="body1" align="center">
+                <Translate text="app.main.profile.body" />
+              </Typography>
+            </Container>
           </Container>
         </Stack>
       </ParallaxBanner>

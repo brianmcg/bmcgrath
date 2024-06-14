@@ -17,7 +17,7 @@ export default function Skill({ title, body, items, icon }) {
     <Card elevation={3} sx={{ height: '100%' }}>
       <CardContent>
         <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
-          <Stack color="primary.dark">{icon}</Stack>
+          <Stack color="secondary.main">{icon}</Stack>
           <Typography sx={{ mb: 2 }} variant="h5">{title}</Typography>
           <Typography paragraph sx={{ mb: 0 }} align="center">{body}</Typography>
           <Box>
