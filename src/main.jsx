@@ -20,5 +20,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </ThemeProvider>
       </I18nextProvider>
     </ParallaxProvider>
-  </StrictMode>
+  </StrictMode>,
 );
