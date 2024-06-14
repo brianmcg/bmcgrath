@@ -14,7 +14,7 @@ function renderListItem(item) {
 
 export default function Skill({ title, body, items, icon }) {
   return (
-    <Card elevation={3}>
+    <Card elevation={3} sx={{ height: '100%' }}>
       <CardContent>
         <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
           <Stack color="primary.dark">{icon}</Stack>

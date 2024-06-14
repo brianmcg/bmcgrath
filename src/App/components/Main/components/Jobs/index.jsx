@@ -1,8 +1,6 @@
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Translate from '@components/Translate';
+import Section from '@components/Section';
 import Job from './components/Job';
 
 const jobs = [{
@@ -26,7 +24,7 @@ const jobs = [{
   ],
 }];
 
-function renderJob({ title, time, location, detail }, key) {
+function renderJob(key, { title, time, location, detail }) {
   return (
     <Grid key={key} item xs={12}>
       <Job title={title} time={time} location={location} detail={detail} />
@@ -36,15 +34,10 @@ function renderJob({ title, time, location, detail }, key) {
 
 export default function Jobs() {
   return (
-    <Container sx={{ mt: 8, mb: 8 }}>
-      <Box mb={2}>
-        <Typography variant="h3" align="center">
-          <Translate text="app.main.jobs.title" />
-        </Typography>
-      </Box>
+    <Section title={<Translate text="app.main.jobs.title" />}>
       <Grid container spacing={4}>
-        {jobs.map((job, i) => renderJob(job, i))}
+        {jobs.map((job, i) => renderJob(i, job))}
       </Grid>
-    </Container>
+    </Section>
   );
 }

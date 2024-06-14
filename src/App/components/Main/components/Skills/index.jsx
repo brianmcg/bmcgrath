@@ -1,11 +1,9 @@
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import CodeIcon from '@mui/icons-material/Code';
 import ComputerIcon from '@mui/icons-material/Computer';
 import LanguageIcon from '@mui/icons-material/Language';
 import Translate from '@components/Translate';
+import Section from '@components/Section';
 import Skill from './components/Skill';
 
 const skills = [{
@@ -25,25 +23,25 @@ const skills = [{
   items: ['Git', 'Github', 'Storybook', 'Docker', 'Webpack', 'Vite',' Material UI', 'Bootstrap'],
 }];
 
-function renderSkill({ title, body, items, icon }, key) {
+function renderSkill(key, { title, body, items, icon }) {
   return (
     <Grid item key={key} xs={12} md={4}>
-      <Skill title={title} body={body} items={items} icon={icon} />
+      <Skill
+        title={title}
+        body={body}
+        items={items}
+        icon={icon}
+      />
     </Grid>
   );
 }
 
 export default function Skills() {
   return (
-    <Container sx={{ mt: 8, mb: 8 }}>
-      <Box mb={2}>
-        <Typography variant="h3" align="center">
-          <Translate text="app.main.skills.title" />
-        </Typography>
-      </Box>
+    <Section title={<Translate text="app.main.skills.title" />}>
       <Grid container spacing={4}>
-        {skills.map((skill, i) => renderSkill(skill, i))}
+        {skills.map((skill, i) => renderSkill(i, skill))}
       </Grid>
-    </Container>
+    </Section>
   );
 }

@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Translate from '@components/Translate';
 import backgroundSrc from '@assets/images/background.png';
 
-const parallaxStyle = { height: '500px', aspectRatio: '2/1' };
+const parallaxStyle = { aspectRatio: '2/1' };
 
 const contentStyle = {
   position: 'absolute',
@@ -19,17 +19,19 @@ const contentStyle = {
 
 export default function Profile() {
   return (
-    <ParallaxBanner style={parallaxStyle} layers={[{ image: backgroundSrc, speed: -30 }]}>
-      <Stack sx={contentStyle}>
-        <Container>
-          <Typography gutterBottom color="inherit" variant="h2" align="center">
-            <Translate text="app.main.profile.title" />
-          </Typography>
-          <Typography color="inherit" variant="body1" align="center">
-            <Translate text="app.main.profile.body" />
-          </Typography>
-        </Container>
-      </Stack>
-    </ParallaxBanner>
+    <section>
+      <ParallaxBanner style={parallaxStyle} layers={[{ image: backgroundSrc, speed: -30 }]}>
+        <Stack sx={contentStyle}>
+          <Container maxWidth="sm">
+            <Typography gutterBottom color="inherit" variant="h2" align="center">
+              <Translate text="app.main.profile.title" />
+            </Typography>
+            <Typography color="inherit" variant="body1" align="center">
+              <Translate text="app.main.profile.body" />
+            </Typography>
+          </Container>
+        </Stack>
+      </ParallaxBanner>
+    </section>
   );
 }

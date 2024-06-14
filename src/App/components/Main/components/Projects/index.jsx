@@ -1,8 +1,6 @@
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Translate from '@components/Translate';
+import Section from '@components/Section';
 import Project from './components/Project';
 
 const projects = [{
@@ -11,9 +9,9 @@ const projects = [{
   title: <Translate text="app.main.projects.boom.title" />,
 }];
 
-function renderProject({ title }, key) {
+function renderProject(key, { title }) {
   return (
-    <Grid key={key} item xs={6}>
+    <Grid key={key} item xs={12} sm={6}>
       <Project title={title} />
     </Grid>
   );
@@ -21,15 +19,10 @@ function renderProject({ title }, key) {
 
 export default function Projects() {
   return (
-    <Container sx={{ mt: 8, mb: 8 }}>
-      <Box mb={2}>
-        <Typography variant="h3" align="center">
-          <Translate text="app.main.projects.title" />
-        </Typography>
-      </Box>
+    <Section title={<Translate text="app.main.projects.title" />}>
       <Grid container spacing={4}>
-        {projects.map((project, i) => renderProject(project, i))}
+        {projects.map((project, i) => renderProject(i, project))}
       </Grid>
-    </Container>
+    </Section>
   );
 }
