@@ -29,10 +29,25 @@
           "body": "I value useful tools and platforms to simplify my workflow."
         }
       },
-      "experience": {
-        "title": "My Experience"
+      "jobs": {
+        "title": "My Experience",
+        "ericsson": {
+          "title": "Software Engineer @ Ericsson",
+          "location": "Athlone, Ireland",
+          "p1": "At Ericsson I worked on an application which allows phone operators to collect data from and monitor the performance of a LTE Radio Access Network.",
+          "p2": "I worked on an application which allows phone operators to collect data from and monitor the performance of a LTE Radio Access Network.",
+          "p3": "It was a full stack development role. I primarily worked on the front end of our application. It wasdeveloped using the Backbone Javascript library. I also developed RESTful web services using Java EE.",
+          "p4": "At Ericsson I worked with the Agile development process."
+        },
+        "edge": {
+          "title": "Senior Software Engineer @ Edge by Ascential",
+          "location": "Dublin, Ireland",
+          "p1": "At Ascential I worked on several web applications which allowed online retailers to analyze data regarding their online sales. This involved requesting large amounts of data as efficiently as possible and displaying it to the user in an easy to understand and intuitive way.",
+          "p2": "I worked mostly with Javascript and Ruby on Rails. The applications we created were built with a number of different Javascript libraries, including Backbone, Angular and React.",
+          "p3": "At Ascential I worked with the Agile Development process."
+        }
       },
-      "work": {
+      "projects": {
         "title": "My Work"
       }
     },

@@ -16,7 +16,7 @@ export default function Skill({ title, body, items, icon }) {
       <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
         <Stack color="primary.dark">{icon}</Stack>
         <Typography sx={{ mb: 2 }} variant="h5">{title}</Typography>
-        <Typography sx={{ mb: 0 }} variant="body1" align="center">{body}</Typography>
+        <Typography paragraph sx={{ mb: 0 }} align="center">{body}</Typography>
         <Box>
           <Stack mt={2}>
             {items.map(item => renderListItem(item))}
