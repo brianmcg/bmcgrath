@@ -1,6 +1,8 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
 function renderListItem(item) {
   return (
@@ -12,17 +14,19 @@ function renderListItem(item) {
 
 export default function Skill({ title, body, items, icon }) {
   return (
-    <Box>
-      <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
-        <Stack color="primary.dark">{icon}</Stack>
-        <Typography sx={{ mb: 2 }} variant="h5">{title}</Typography>
-        <Typography paragraph sx={{ mb: 0 }} align="center">{body}</Typography>
-        <Box>
-          <Stack mt={2}>
-            {items.map(item => renderListItem(item))}
-          </Stack>
-        </Box>
-      </Stack>
-    </Box>
+    <Card elevation={3}>
+      <CardContent>
+        <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
+          <Stack color="primary.dark">{icon}</Stack>
+          <Typography sx={{ mb: 2 }} variant="h5">{title}</Typography>
+          <Typography paragraph sx={{ mb: 0 }} align="center">{body}</Typography>
+          <Box>
+            <Stack mt={2}>
+              {items.map(item => renderListItem(item))}
+            </Stack>
+          </Box>
+        </Stack>
+      </CardContent>
+    </Card>
   );
 }

@@ -1,10 +1,23 @@
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import Translate from '@components/Translate';
+import Project from './components/Project';
+
+const projects = [{
+  title: <Translate text="app.main.projects.rugby.title" />,
+}, {
+  title: <Translate text="app.main.projects.boom.title" />,
+}];
+
+function renderProject({ title }, key) {
+  return (
+    <Grid key={key} item xs={6}>
+      <Project title={title} />
+    </Grid>
+  );
+}
 
 export default function Projects() {
   return (
@@ -14,12 +27,9 @@ export default function Projects() {
           <Translate text="app.main.projects.title" />
         </Typography>
       </Box>
-      <Card elevation={3} sx= {{ p: 4 }}>
-        <CardContent>
-          <Grid container spacing={2}>
-          </Grid>
-        </CardContent>
-      </Card>
+      <Grid container spacing={4}>
+        {projects.map((project, i) => renderProject(project, i))}
+      </Grid>
     </Container>
   );
 }

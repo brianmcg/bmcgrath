@@ -1,8 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import CodeIcon from '@mui/icons-material/Code';
 import ComputerIcon from '@mui/icons-material/Computer';
@@ -43,13 +41,9 @@ export default function Skills() {
           <Translate text="app.main.skills.title" />
         </Typography>
       </Box>
-      <Card elevation={3} sx= {{ p: 4 }} elavation={0}>
-        <CardContent>
-          <Grid container spacing={2}>
-            {skills.map((skill, i) => renderSkill(skill, i))}
-          </Grid>
-        </CardContent>
-      </Card>
+      <Grid container spacing={4}>
+        {skills.map((skill, i) => renderSkill(skill, i))}
+      </Grid>
     </Container>
   );
 }

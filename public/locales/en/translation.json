@@ -48,7 +48,13 @@
         }
       },
       "projects": {
-        "title": "My Work"
+        "title": "My Work",
+        "rugby": {
+          "title": "Rugby Rankings"
+        },
+        "boom": {
+          "title": "Boom"
+        }
       }
     },
     "footer": {
