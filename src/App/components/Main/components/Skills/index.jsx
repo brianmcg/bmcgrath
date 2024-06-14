@@ -3,7 +3,6 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Box from '@mui/material/Box';
 import CodeIcon from '@mui/icons-material/Code';
 import ComputerIcon from '@mui/icons-material/Computer';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -38,7 +37,7 @@ function renderSkill({ title, body, items, icon }, key) {
 export default function Skills() {
   return (
     <Container sx={{ mt: 8, mb: 8 }}>
-      <Card sx= {{ p: 4 }}>
+      <Card sx= {{ p: 4 }} elavation={0}>
         <Typography variant="h3" align="center">
           <Translate text="app.main.skills.title" />
         </Typography>

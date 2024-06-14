@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 
 import Translate from '@components/Translate';
-import backgroundSrc from '@assets/images/background_1.png';
+import backgroundSrc from '@assets/images/background.png';
 
 const parallaxStyle = { height: '500px', aspectRatio: '2/1' };
 

@@ -7,7 +7,7 @@ import { createTheme  } from '@mui/material/styles';
 
 export const PRIMARY = '#6e07f3';
 
-export const SECONDARY = '#19194b';
+export const SECONDARY = '#5be9b9'; // #19194b';
 
 export const BACKGROUND = '#ffffff'; // '#e6e7eb';
 
@@ -58,78 +58,14 @@ const theme = createTheme({
     },
   },
   components: {
-    MuiMenu: {
-      styleOverrides: {
-        list: {
-          '&[role="menu"]': {
-            backgroundColor: SECONDARY,
-            color: 'white',
-          },
-        },
-      },
-    },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          ...transitionStyle,
-          borderRadius: 0,
-        },
-      },
-    },
-    MuiStack: {
-      styleOverrides: {
-        root: {
-          ...transitionStyle,
-        },
-      },
-    },
-    MuiIconButton: {
-      styleOverrides: {
-        root: {
-          ...transitionStyle,
-          borderRadius: 0,
-        },
-      },
-    },
-    MuiTabs: {
-      styleOverrides: {
-        indicator: {
-          backgroundColor: SUCCESS,
-          height: 5,
-        },
-      },
-    },
-    MuiTab: {
-      styleOverrides: {
-        root:{
-          textTransform: 'none',
-          color: PRIMARY,
-          // '&.Mui-selected': {
-          //   opacity: 1,
-          // }
-        },
-      },
-    },
     MuiLink: {
       styleOverrides: {
         root: {
           ...transitionStyle,
           textDecoration: 'none',
           '&:hover': {
-            color: INFO,
+            color: SECONDARY,
           },
-        },
-      },
-    },
-    MuiPaper: {
-      styleOverrides: {
-        rounded: { borderRadius: 0 },
-      },
-    },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: {
-          borderRadius: 0,
         },
       },
     },
