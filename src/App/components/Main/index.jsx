@@ -5,12 +5,12 @@ import Experience from './components/Experience';
 
 export default function Main() {
   return (
-    <>
+    <main>
       <Profile />
       <Skills />
       <Experience />
       <Work />
-    </>
+    </main>
   );
 }
 

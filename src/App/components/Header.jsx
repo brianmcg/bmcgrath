@@ -11,29 +11,32 @@ import coffeeSrc from '@assets/icons/coffee.svg';
 
 export default function Header() {
   const headingStyle = {
-    m: 8,
+    mt: 8,
     mb: 0,
     alignItems: 'center',
     justifyContent: 'center',
   };
 
   return (
-    <Stack sx={headingStyle} spacing={4}>
-      <Box sx={{ mb: 0 }}>
-        <Typography color="inherit" variant="h1" align="center">
-          <Translate text="app.header.title" />
-        </Typography>
-        <Typography color="inherit" variant="h5" align="center">
-          <Translate text="app.header.body" />
-        </Typography>
-      </Box>
-      <img src={avatarSrc} alt="Avatar" style={{ borderRadius: '50%' }} />
+    <main>
+      <Stack sx={headingStyle} spacing={4}>
+        <Box sx={{ mb: 0 }}>
+          <Typography color="inherit" variant="h1" align="center">
+            <Translate text="app.header.title" />
+          </Typography>
+          <Typography color="inherit" variant="h5" align="center">
+            <Translate text="app.header.body" />
+          </Typography>
+        </Box>
 
-      <Stack direction="row" spacing={4} alignItems="flex-end">
-        <img src={tabletSrc} alt="Programming" style={{ width: 128, height: 128 }}/>
-        <img src={programmingSrc} alt="Programming" style={{ width: 256, height: 256 }}/>
-        <img src={coffeeSrc} alt="Programming" style={{ width: 128, height: 128 }}/>
+        <img src={avatarSrc} alt="Avatar" style={{ borderRadius: '50%' }} />
+
+        <Stack direction="row" spacing={4} alignItems="flex-end">
+          <img src={tabletSrc} alt="Programming" style={{ width: 128, height: 128 }}/>
+          <img src={programmingSrc} alt="Programming" style={{ width: 256, height: 256 }}/>
+          <img src={coffeeSrc} alt="Programming" style={{ width: 128, height: 128 }}/>
+        </Stack>
       </Stack>
-    </Stack>
+    </main>
   );
 }
