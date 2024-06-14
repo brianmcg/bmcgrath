@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Translate from '@components/Translate';
 import backgroundSrc from '@assets/images/background.png';
 
-const parallaxStyle = { aspectRatio: '2/1' };
+const parallaxStyle = { height: 500, aspectRatio: '2/1' };
 
 const contentStyle = {
   position: 'absolute',

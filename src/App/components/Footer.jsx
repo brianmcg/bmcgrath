@@ -10,7 +10,7 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 import { useTheme } from '@mui/material';
 import Translate from '@components/Translate';
 
-import logoSrc from '@assets/icons/logo.svg';
+import logoSrc from '@assets/images/logo.svg';
 
 const options = [{
   icon: <LinkedInIcon />,
