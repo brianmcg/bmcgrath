@@ -19,7 +19,7 @@ export default function Header() {
     <main>
       <Stack sx={headingStyle} spacing={4}>
         <Box sx={{ mb: 0 }}>
-          <Typography color="inherit" variant="h1" align="center">
+          <Typography color="inherit" variant="h1" align="center" sx={{ fontSize: { xs: 64, sm: 96 }}}>
             <Translate text="app.header.title" />
           </Typography>
           <Typography color="inherit" variant="h5" align="center">

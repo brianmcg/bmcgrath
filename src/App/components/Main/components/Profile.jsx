@@ -19,21 +19,19 @@ const contentStyle = {
 
 export default function Profile() {
   return (
-    <section>
-      <ParallaxBanner style={parallaxStyle} layers={[{ image: backgroundSrc, speed: -30 }]}>
-        <Stack sx={contentStyle}>
-          <Container>
-            <Typography gutterBottom color="inherit" variant="h3" align="center">
-              <Translate text="app.main.profile.title" />
+    <ParallaxBanner style={parallaxStyle} layers={[{ image: backgroundSrc, speed: -30 }]}>
+      <Stack sx={contentStyle}>
+        <Container>
+          <Typography gutterBottom color="inherit" variant="h3" align="center">
+            <Translate text="app.main.profile.title" />
+          </Typography>
+          <Container maxWidth="md">
+            <Typography color="inherit" variant="body1" align="center">
+              <Translate text="app.main.profile.body" />
             </Typography>
-            <Container maxWidth="md">
-              <Typography color="inherit" variant="body1" align="center">
-                <Translate text="app.main.profile.body" />
-              </Typography>
-            </Container>
           </Container>
-        </Stack>
-      </ParallaxBanner>
-    </section>
+        </Container>
+      </Stack>
+    </ParallaxBanner>
   );
 }

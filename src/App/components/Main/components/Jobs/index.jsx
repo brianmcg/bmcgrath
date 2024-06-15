@@ -29,7 +29,13 @@ const jobs = [{
 function renderJob(key, { title, time, location, detail, skills }) {
   return (
     <Grid key={key} item xs={12}>
-      <Job title={title} time={time} location={location} detail={detail} skills={skills} />
+      <Job
+        title={title}
+        time={time}
+        location={location}
+        detail={detail}
+        skills={skills}
+      />
     </Grid>
   );
 }

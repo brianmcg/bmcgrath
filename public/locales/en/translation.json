@@ -12,10 +12,10 @@
     "main": {
       "profile": {
         "title": "Hi, I’m Brian. Nice to meet you.",
-        "body": "Since beginning my journey as a freelance designer 12 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops."
+        "body": "Since beginning my journey as a software engineer 11 years ago, I've worked for some great companies, and collaborated with talented people to create digital products. I love building things, I'm quietly confident, naturally curious, and perpetually working on improving my skills."
       },
       "skills": {
-        "title": " My Skills",
+        "title": "My Skills",
         "languages": {
           "title": "Languages",
           "body": "I like to code things from scratch, and enjoy bringing ideas to life in the browser."
@@ -30,7 +30,7 @@
         }
       },
       "jobs": {
-        "title": "My Experience",
+        "title": "Professional Experience",
         "ericsson": {
           "title": "Software Engineer @ Ericsson",
           "location": "Athlone, Ireland",
@@ -48,12 +48,17 @@
         }
       },
       "projects": {
-        "title": "My Work",
+        "title": "Some Projects",
+        "common": {
+          "launch": "Launch"
+        },
         "rugby": {
-          "title": "Rugby Rankings"
+          "title": "Rugby Rankings",
+          "description": "I'm a huge sports fan and I love watching rugby. Instead of wondering how future results will effect the Rugby World Rankings, I decided to figure out the calculation World Rugby use for the rankings, and designed a web app that allows you to predict future results and show you the updated rankings."
         },
         "boom": {
-          "title": "Boom"
+          "title": "Boom",
+          "description": "I love video games. I read about the algorithm used to created the pseudo 3d graphics in the game Wolfenstein 3D. I decided to implement my own version in Javascript. Over time it's grown into almost a full game. It's not finished yet by I'll get there."
         }
       }
     },

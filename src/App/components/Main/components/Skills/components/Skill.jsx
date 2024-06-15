@@ -21,7 +21,7 @@ export default function Skill({ title, body, items, icon }) {
           <Typography sx={{ mb: 2 }} variant="h5">{title}</Typography>
           <Typography paragraph sx={{ mb: 0 }} align="center">{body}</Typography>
           <Box>
-            <Stack mt={2}>
+            <Stack mt={2} mb={2}>
               {items.map(item => renderListItem(item))}
             </Stack>
           </Box>
