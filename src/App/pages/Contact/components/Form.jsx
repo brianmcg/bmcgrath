@@ -11,19 +11,21 @@ import Translate from '@components/Translate';
 const MY_EMAIL = 'brian.joseph.mcgrath@gmail.com';
 const MY_NAME = 'Brian McGrath';
 const SUBJECT = 'Message from bmcgrath.net';
-const MAILJET_URL = 'https://api.mailjet.com/v3.1/send';
+const MAILJET_URL = 'https://api.mailjet.com/v3/send';
 const API_KEY = 'b94e3d4204e43a7b3b7116e8f2e16646';
 const SECRET_KEY = 'bc76aa2d6eeb3e2be1c3e3998b59a5c0';
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function sendEmail(name, email, message) {
   const data = JSON.stringify({
-    Messages: [{
-      From: { Email: email, Name: name },
-      To: [{ Email: MY_EMAIL, Name: MY_NAME}],
-      Subject: SUBJECT,
-      TextPart: message,
+    'FromEmail': email,
+    'FromName': name,
+    'Recipients': [{
+      'Email': MY_EMAIL,
+      'Name': MY_NAME,
     }],
+    'Subject': SUBJECT,
+    'Text-part': message,
   });
 
   const config = {

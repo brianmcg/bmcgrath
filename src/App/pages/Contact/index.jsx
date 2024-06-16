@@ -12,7 +12,7 @@ import avatarSrc from '@assets/images/avatar.jpg';
 export default function Contact() {
   return (
     <>
-      <Container maxWidth="md">
+      <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" pt={4}>
           <Link href="/">
             <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48 }} />
@@ -28,11 +28,11 @@ export default function Contact() {
         </Typography>
       </Divider>
 
-      <Container maxWidth="md">
-        <Typography variant="h3" align="center" sx={{ fontSize: { xs: 32, sm: 40, md: 48 }}}>
+      <Container maxWidth="md" sx={{ mt: 4 }}>
+        <Typography variant="h3" gutterBottom align="center" sx={{ fontSize: { xs: 32, sm: 40 }}}>
           <Translate text="app.contact.description1" />
         </Typography>
-        <Typography variant="h3" align="center" sx={{ fontSize: { xs: 32, sm: 40, md: 48 }}}>
+        <Typography variant="h3" gutterBottom align="center" sx={{ fontSize: { xs: 32, sm: 40 }}}>
           <Translate text="app.contact.description2" />
         </Typography>
         <Form />
