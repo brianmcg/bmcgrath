@@ -28,8 +28,8 @@ const options = [{
 
 function renderOption({ icon, label, href, target = '_blank' }) {
   return (
-    <Link href={href} target={target} color="inherit">
-      <Stack key={href} direction="row" alignItems="center" gap={1}>
+    <Link key={href} href={href} target={target} color="inherit">
+      <Stack direction="row" alignItems="center" gap={1}>
         {icon}
         <Typography variant="caption">
           <Translate text={label} />

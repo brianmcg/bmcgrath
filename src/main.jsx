@@ -9,8 +9,6 @@ import i18n from '@utils/i18n';
 import App from './App';
 import theme from './theme';
 
-import './index.css';
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
