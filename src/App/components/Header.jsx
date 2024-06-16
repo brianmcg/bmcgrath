@@ -23,7 +23,7 @@ export default function Header() {
             <Translate text="app.header.title" />
           </Typography>
           <Typography color="inherit" variant="h5" align="center">
-            <Translate text="app.header.body" />
+            <Translate text="app.header.description" />
           </Typography>
         </Box>
         <img src={avatarSrc} alt="Avatar" style={{ borderRadius: '50%' }} />

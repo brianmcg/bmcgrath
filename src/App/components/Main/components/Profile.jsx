@@ -27,7 +27,7 @@ export default function Profile() {
           </Typography>
           <Container maxWidth="md">
             <Typography color="inherit" variant="body1" align="center">
-              <Translate text="app.main.profile.body" />
+              <Translate text="app.main.profile.description" />
             </Typography>
           </Container>
         </Container>

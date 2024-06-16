@@ -12,14 +12,14 @@ function renderListItem(item) {
   );
 }
 
-export default function Skill({ title, body, items, icon }) {
+export default function Skill({ title, description, items, icon }) {
   return (
     <Card elevation={3} sx={{ height: '100%' }}>
       <CardContent>
         <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
           <Stack color="secondary.main">{icon}</Stack>
           <Typography sx={{ mb: 2 }} variant="h5">{title}</Typography>
-          <Typography paragraph sx={{ mb: 0 }} align="center">{body}</Typography>
+          <Typography paragraph sx={{ mb: 0 }} align="center">{description}</Typography>
           <Box>
             <Stack mt={2} mb={2}>
               {items.map(item => renderListItem(item))}

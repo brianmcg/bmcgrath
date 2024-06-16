@@ -4,12 +4,15 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import Divider from '@mui/material/Divider';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const ExpandMore = styled((props) => {
   const { onClick, children, className } = props;
@@ -36,17 +39,17 @@ export default function Job({ title, time, location, detail, skills }) {
     <Card elevation={3}>
       <CardContent>
         <Stack
-          direction={{ xs: 'column' }}
+          direction={{ xs: 'column', sm: 'row' }}
           alignItems="center"
           justifyContent="space-between"
           spacing={1}
         >
-          <Typography align="right" sx={{ fontSize: { xs: 12, sm: 20 }}} variant="h6">
-            {title}
-          </Typography>
-          <Stack direction="row" alignItems="center" justifyContent="center" spacing={1}>
-            <CalendarMonthIcon sx={{ color: 'secondary.main' }} />
-            <Typography align="center" sx={{ fontSize: { xs: 12, sm: 20 }}} variant="h6">{time}</Typography>
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} alignItems="center" justifyContent="center">
+            <Typography align="center" sx={{ fontSize: { xs: 16, md: 20 }}} variant="h6">
+              {title}
+            </Typography>
+            <CircleIcon color="secondary" sx={{ fontSize: { xs: 8, md: 16 } }} />
+            <Typography align="center" sx={{ fontSize: { xs: 16, md: 20 }}} variant="h6">{time}</Typography>
           </Stack>
           <ExpandMore expand={expanded} onClick={handleExpandClick}>
             <ExpandMoreIcon />

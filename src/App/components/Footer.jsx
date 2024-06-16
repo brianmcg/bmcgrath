@@ -6,8 +6,9 @@ import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import CopyrightIcon from '@mui/icons-material/Copyright';
 import { useTheme } from '@mui/material';
+import CopyrightIcon from '@mui/icons-material/Copyright';
+import ArticleIcon from '@mui/icons-material/Article';
 import Translate from '@components/Translate';
 
 import logoSrc from '@assets/images/logo.svg';
@@ -24,6 +25,10 @@ const options = [{
   icon: <EmailIcon />,
   label: 'app.footer.email',
   href: 'mailto:brian.joseph.mcgrath@gmail.com',
+}, {
+  icon: <ArticleIcon />,
+  label: 'app.footer.cv',
+  href: '/CV_Brian_McGrath.pdf',
 }];
 
 function renderOption({ icon, label, href, hoverColor }) {
@@ -63,22 +68,23 @@ export default function Footer() {
           color: 'common.white',
           backgroundImage: `linear-gradient(${primary.main}, ${primary.dark})`,
           borderTop: `solid 4px ${secondary.main}`,
-        }}>
+        }}
+      >
         <Container>
           <Stack justifyContent="center" alignItems="center" spacing={6}>
-            <img src={logoSrc} alt="Logo" style={{ height: 64, width: 64, opacity: 0.75 }} />
-            <Typography variant="h6" sx={{ opacity: 0.75 }}>
+            <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48, opacity: 0.75 }} />
+            <Typography align="center" variant="h6" sx={{ opacity: 0.75, fontSize: { xs: 16, sm: 20 } }}>
               <Translate text="app.footer.title" />
             </Typography>
             <Box>
-              <Stack direction="row" justifyContent="center" alignItems="flex-start" gap={4}>
+              <Stack direction={{ sx: 'column', sm: 'row' }} justifyContent="center" alignItems="flex-start" gap={4}>
                 {options.map(option => renderOption({ ...option, hoverColor: secondary.main }))}
               </Stack>
             </Box>
             <Stack direction="row" mt={8} sx={{ opacity: 0.75 }} spacing={1}>
               <CopyrightIcon fontSize="small" />
               <Typography variant="body2">
-                <Translate text="app.footer.body" />
+                <Translate text="app.footer.author" />
               </Typography>
             </Stack>
           </Stack>

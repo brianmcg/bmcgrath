@@ -9,26 +9,26 @@ import Skill from './components/Skill';
 const skills = [{
   title: <Translate text="app.main.skills.languages.title" />,
   icon: <LanguageIcon fontSize="large" />,
-  body: <Translate text="app.main.skills.languages.body" />,
+  description: <Translate text="app.main.skills.languages.description" />,
   items: ['Javascript', 'Typescript', 'HTML', 'CSS', 'Sass', 'Ruby', 'Java', 'MySQL'],
 }, {
   title: <Translate text="app.main.skills.libraries.title" />,
-  body: <Translate text="app.main.skills.libraries.body" />,
+  description: <Translate text="app.main.skills.libraries.description" />,
   icon: <CodeIcon fontSize="large" />,
   items: ['React', 'Next.js', 'Backbone.js', 'D3.js', 'Node.js', 'Pixi.js', 'Highcharts.js', 'Ruby on Rails'],
 }, {
   title: <Translate text="app.main.skills.tools.title" />,
   icon: <ComputerIcon fontSize="large" />,
-  body: <Translate text="app.main.skills.tools.body" />,
+  description: <Translate text="app.main.skills.tools.description" />,
   items: ['Git', 'Github', 'Storybook', 'Docker', 'Webpack', 'Vite',' Material UI', 'Bootstrap'],
 }];
 
-function renderSkill(key, { title, body, items, icon }) {
+function renderSkill(key, { title, description, items, icon }) {
   return (
     <Grid item key={key} xs={12} md={4}>
       <Skill
         title={title}
-        body={body}
+        description={description}
         items={items}
         icon={icon}
       />
