@@ -1,13 +1,12 @@
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Root from './pages/Root';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <Routes>
+      <Route path='/' element={<Root/>} />
+      <Route path='/contact' element={<Contact/>} />
+    </Routes>
   );
 }

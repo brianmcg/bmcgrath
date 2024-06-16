@@ -29,11 +29,11 @@ export default function Profile() {
             align="center"
             sx={{ fontSize: { xs: 32, sm: 40, md: 48 }}}
           >
-            <Translate text="app.main.profile.title" />
+            <Translate text="app.root.main.profile.title" />
           </Typography>
           <Container maxWidth="md">
             <Typography color="inherit" variant="body1" align="center">
-              <Translate text="app.main.profile.description" />
+              <Translate text="app.root.main.profile.description" />
             </Typography>
           </Container>
         </Container>

@@ -5,70 +5,86 @@
     "es": "Spanish"
   },
   "app": {
-    "header": {
-      "title": "Brian McGrath",
-      "description": "Software Engineer, Frontend Developer"
-    },
-    "main": {
-      "profile": {
-        "title": "Hi, I’m Brian. Nice to meet you.",
-        "description": "Since beginning my journey as a software engineer 11 years ago, I've worked for some great companies, and collaborated with talented people to create digital products. I love building things, I'm quietly confident, naturally curious, and perpetually working on improving my skills."
+    "root": {
+      "header": {
+        "title": "Brian McGrath",
+        "description": "Software Engineer, Frontend Developer",
+        "contact": "Say Hello"
       },
-      "skills": {
-        "title": "My Skills",
-        "languages": {
-          "title": "Languages",
-          "description": "I like to code things from scratch, and enjoy bringing ideas to life in the browser."
+      "main": {
+        "profile": {
+          "title": "Hi, I’m Brian. Nice to meet you.",
+          "description": "Since beginning my journey as a software engineer 11 years ago, I've worked for some great companies, and collaborated with talented people to create digital products. I love building things, I'm quietly confident, naturally curious, and perpetually working on improving my skills."
         },
-        "libraries": {
-          "title": "Libraries",
-          "description": "I love discovering new libraries and frameworks to help my work."
+        "skills": {
+          "title": "My Skills",
+          "languages": {
+            "title": "Languages",
+            "description": "I like to code things from scratch, and enjoy bringing ideas to life in the browser."
+          },
+          "libraries": {
+            "title": "Libraries",
+            "description": "I love discovering new libraries and frameworks to help my work."
+          },
+          "tools": {
+            "title": "Tools",
+            "description": "I value useful tools and platforms to simplify my workflow."
+          }
         },
-        "tools": {
-          "title": "Tools",
-          "description": "I value useful tools and platforms to simplify my workflow."
+        "jobs": {
+          "title": "Professional Experience",
+          "ericsson": {
+            "title": "Software Engineer @ Ericsson",
+            "location": "Athlone, Ireland",
+            "p1": "At Ericsson I worked on an application which allows phone operators to collect data from and monitor the performance of a LTE Radio Access Network.",
+            "p2": "I worked on an application which allows phone operators to collect data from and monitor the performance of a LTE Radio Access Network.",
+            "p3": "It was a full stack development role. I primarily worked on the front end of our application. It wasdeveloped using the Backbone Javascript library. I also developed RESTful web services using Java EE.",
+            "p4": "At Ericsson I worked with the Agile development process."
+          },
+          "edge": {
+            "title": "Senior Software Engineer @ Edge by Ascential",
+            "location": "Dublin, Ireland",
+            "p1": "At Ascential I worked on several web applications which allowed online retailers to analyze data regarding their online sales. This involved requesting large amounts of data as efficiently as possible and displaying it to the user in an easy to understand and intuitive way.",
+            "p2": "I worked mostly with Javascript and Ruby on Rails. The applications we created were built with a number of different Javascript libraries, including Backbone, Angular and React.",
+            "p3": "At Ascential I worked with the Agile Development process."
+          }
+        },
+        "projects": {
+          "title": "Some Projects",
+          "common": {
+            "launch": "Launch"
+          },
+          "rugby": {
+            "title": "Rugby Rankings",
+            "description": "I'm a rugby fan. Instead of wondering how future results will effect the Rugby World Rankings, I decided to figure out the calculation used for the rankings, and designed a web app that allows you to predict future results and show you the updated rankings."
+          },
+          "boom": {
+            "title": "Boom",
+            "description": "I love video games. I read about the algorithm used to create the pseudo 3D graphics in the game Wolfenstein 3D. I implemented my own version in Javascript. Over time it's grown into almost a full game. It's not finished yet by I'll get there."
+          }
         }
       },
-      "jobs": {
-        "title": "Professional Experience",
-        "ericsson": {
-          "title": "Software Engineer @ Ericsson",
-          "location": "Athlone, Ireland",
-          "p1": "At Ericsson I worked on an application which allows phone operators to collect data from and monitor the performance of a LTE Radio Access Network.",
-          "p2": "I worked on an application which allows phone operators to collect data from and monitor the performance of a LTE Radio Access Network.",
-          "p3": "It was a full stack development role. I primarily worked on the front end of our application. It wasdeveloped using the Backbone Javascript library. I also developed RESTful web services using Java EE.",
-          "p4": "At Ericsson I worked with the Agile development process."
-        },
-        "edge": {
-          "title": "Senior Software Engineer @ Edge by Ascential",
-          "location": "Dublin, Ireland",
-          "p1": "At Ascential I worked on several web applications which allowed online retailers to analyze data regarding their online sales. This involved requesting large amounts of data as efficiently as possible and displaying it to the user in an easy to understand and intuitive way.",
-          "p2": "I worked mostly with Javascript and Ruby on Rails. The applications we created were built with a number of different Javascript libraries, including Backbone, Angular and React.",
-          "p3": "At Ascential I worked with the Agile Development process."
-        }
-      },
-      "projects": {
-        "title": "Some Projects",
-        "common": {
-          "launch": "Launch"
-        },
-        "rugby": {
-          "title": "Rugby Rankings",
-          "description": "I'm a rugby fan. Instead of wondering how future results will effect the Rugby World Rankings, I decided to figure out the calculation used for the rankings, and designed a web app that allows you to predict future results and show you the updated rankings."
-        },
-        "boom": {
-          "title": "Boom",
-          "description": "I love video games. I read about the algorithm used to create the pseudo 3D graphics in the game Wolfenstein 3D. I implemented my own version in Javascript. Over time it's grown into almost a full game. It's not finished yet by I'll get there."
-        }
+      "footer": {
+        "title": "Living, learning, & leveling up one day at a time.",
+        "author": "Handcrafted by me",
+        "github": "Github",
+        "linkedin": "LinkedIn",
+        "email": "Email",
+        "cv": "CV"
       }
     },
-    "footer": {
-      "title": "Living, learning, & leveling up one day at a time.",
-      "author": "Handcrafted by me",
-      "github": "Github",
-      "linkedin": "LinkedIn",
+    "contact": {
+      "title": "Contact",
+      "description1": "Thanks for taking the time to reach out.",
+      "description2": "How can I help you today?",
+      "name": "Name",
       "email": "Email",
-      "cv": "CV"
+      "message": "Message",
+      "submit": "Submit",
+      "errors": {
+        "common": "Please fill out this field.",
+        "email": "Please nter a valid email address."
+      }
     }
   }
 }

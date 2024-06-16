@@ -11,21 +11,21 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 import ArticleIcon from '@mui/icons-material/Article';
 import Translate from '@components/Translate';
 
-import logoSrc from '@assets/images/logo.svg';
+import logoSrc from '@assets/images/logo-white.svg';
 
 const email = 'brian.joseph.mcgrath@gmail.com';
 
 const options = [{
   icon: <LinkedInIcon />,
-  label: 'app.footer.linkedin',
+  label: 'app.root.footer.linkedin',
   href: 'https://www.linkedin.com/in/brianjmcgrath/',
 }, {
   icon: <GitHubIcon />,
-  label: 'app.footer.github',
+  label: 'app.root.footer.github',
   href: 'https://github.com/brianmcg',
 }, {
   icon: <ArticleIcon />,
-  label: 'app.footer.cv',
+  label: 'app.root.footer.cv',
   href: '/CV_Brian_McGrath.pdf',
 }];
 
@@ -72,7 +72,7 @@ export default function Footer() {
           <Stack justifyContent="center" alignItems="center" spacing={6}>
             <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48, opacity: 0.75 }} />
             <Typography align="center" variant="h6" sx={{ opacity: 0.75, fontSize: { xs: 16, sm: 20 } }}>
-              <Translate text="app.footer.title" />
+              <Translate text="app.root.footer.title" />
             </Typography>
             <Box>
               <Stack direction={{ sx: 'column', sm: 'row' }} justifyContent="center" alignItems="flex-start" gap={4}>
@@ -88,7 +88,7 @@ export default function Footer() {
             <Stack direction="row" mt={8} sx={{ opacity: 0.75 }} spacing={1}>
               <CopyrightIcon fontSize="small" />
               <Typography variant="body2">
-                <Translate text="app.footer.author" />
+                <Translate text="app.root.footer.author" />
               </Typography>
             </Stack>
           </Stack>

@@ -29,7 +29,7 @@ export default function Project({ title, icon, description, url }) {
               sx={{ borderRadius: 50 }}
               startIcon={<LaunchIcon />}
             >
-              <Translate text="app.main.projects.common.launch" />
+              <Translate text="app.root.main.projects.common.launch" />
             </Button>
           </Link>
         </CardContent>
