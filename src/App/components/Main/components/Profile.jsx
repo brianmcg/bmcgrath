@@ -22,7 +22,13 @@ export default function Profile() {
     <ParallaxBanner style={parallaxStyle} layers={[{ image: backgroundSrc, speed: -30 }]}>
       <Stack sx={contentStyle}>
         <Container>
-          <Typography gutterBottom color="inherit" variant="h3" align="center">
+          <Typography
+            gutterBottom
+            color="inherit"
+            variant="h3"
+            align="center"
+            sx={{ fontSize: { xs: 32, sm: 40, md: 48 }}}
+          >
             <Translate text="app.main.profile.title" />
           </Typography>
           <Container maxWidth="md">
