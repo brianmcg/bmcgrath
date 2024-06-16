@@ -85,9 +85,10 @@ export default function Form() {
     setMessageError(!validateMessage(message));
   }
 
-
   function handleSubmit(event) {
     event.preventDefault();
+    sendEmail(name, email, message);
+    navigateTo('/');
   }
 
   return (

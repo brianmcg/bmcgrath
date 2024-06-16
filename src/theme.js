@@ -14,6 +14,14 @@ export const SUCCESS = '#58be46';
 
 export const ERROR = '#c30019';
 
+const transitionStyle = {
+  transitionBehavior :'normal',
+  transitionDelay: '0s',
+  transitionDuration: '0.2s',
+  transitionProperty: 'all',
+  transitionTimingFunction: 'linear',
+};
+
 const theme = createTheme({
   typography: {
     fontFamily: 'Inter',
@@ -64,6 +72,31 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          ...transitionStyle,
+          borderRadius: 50,
+          border: '2px solid',
+          '&:hover': {
+            backgroundColor: PRIMARY,
+            color: 'white',
+            border: `2px solid ${PRIMARY}`,
+          },
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          ...transitionStyle,
+          textDecoration: 'none',
+          '&:hover': {
+            color: SECONDARY,
+          },
+        },
+      },
+    },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {

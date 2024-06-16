@@ -35,7 +35,6 @@ export default function Header() {
             <Button
               variant="outlined"
               type="submit"
-              sx={{ borderRadius: 50 }}
               startIcon={<EmailIcon />}
             >
               <Translate text="app.root.header.contact" />
