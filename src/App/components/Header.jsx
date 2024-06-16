@@ -4,8 +4,8 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Translate from '@components/Translate';
 
-import avatarSrc from '@assets/images/avatar.jpg';
 import desktopSrc from '@assets/images/desktop.svg';
+// import avatarSrc from '@assets/images/avatar.jpg';
 
 export default function Header() {
   const headingStyle = {
@@ -26,7 +26,7 @@ export default function Header() {
             <Translate text="app.header.description" />
           </Typography>
         </Box>
-        <img src={avatarSrc} alt="Avatar" style={{ borderRadius: '50%' }} />
+        {/*<img src={avatarSrc} alt="Avatar" style={{ borderRadius: '50%' }} />*/}
         <img src={desktopSrc} alt="Programming" style={{ width: '40%', height: '40%' }}/>
       </Stack>
     </main>

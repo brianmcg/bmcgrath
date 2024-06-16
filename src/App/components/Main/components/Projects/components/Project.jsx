@@ -18,7 +18,7 @@ export default function Project({ title, icon, description, url }) {
       </CardContent>
       <Stack alignItems="center" justifyContent="space-between">
         <CardContent>
-          <Typography variant="body1" align="center">
+          <Typography variant="body1">
             {description}
           </Typography>
         </CardContent>

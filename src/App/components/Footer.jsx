@@ -13,6 +13,8 @@ import Translate from '@components/Translate';
 
 import logoSrc from '@assets/images/logo.svg';
 
+const email = 'brian.joseph.mcgrath@gmail.com';
+
 const options = [{
   icon: <LinkedInIcon />,
   label: 'app.footer.linkedin',
@@ -22,16 +24,12 @@ const options = [{
   label: 'app.footer.github',
   href: 'https://github.com/brianmcg',
 }, {
-  icon: <EmailIcon />,
-  label: 'app.footer.email',
-  href: 'mailto:brian.joseph.mcgrath@gmail.com',
-}, {
   icon: <ArticleIcon />,
   label: 'app.footer.cv',
   href: '/CV_Brian_McGrath.pdf',
 }];
 
-function renderOption({ icon, label, href, hoverColor }) {
+function renderOption({ icon, label, href, hoverColor, target = '_blank' }) {
   const linkStyle = {
     transitionBehavior :'normal',
     transitionDelay: '0s',
@@ -47,7 +45,7 @@ function renderOption({ icon, label, href, hoverColor }) {
   return (
     <Stack key={href} direction="row" alignItems="center" gap={1}>
       {icon}
-      <Link sx={linkStyle} href={href} target="_blank" color="inherit">
+      <Link sx={linkStyle} href={href} target={target} color="inherit">
         <Typography variant="caption">
           <Translate text={label} />
         </Typography>
@@ -81,6 +79,12 @@ export default function Footer() {
                 {options.map(option => renderOption({ ...option, hoverColor: secondary.main }))}
               </Stack>
             </Box>
+            <Stack direction="row" mt={8} sx={{ opacity: 0.75 }} spacing={1}>
+              <EmailIcon fontSize="small" />
+              <Typography variant="body2">
+                {email}
+              </Typography>
+            </Stack>
             <Stack direction="row" mt={8} sx={{ opacity: 0.75 }} spacing={1}>
               <CopyrightIcon fontSize="small" />
               <Typography variant="body2">

@@ -54,11 +54,11 @@
         },
         "rugby": {
           "title": "Rugby Rankings",
-          "description": "I'm a huge sports fan and I love watching rugby. Instead of wondering how future results will effect the Rugby World Rankings, I decided to figure out the calculation World Rugby use for the rankings, and designed a web app that allows you to predict future results and show you the updated rankings."
+          "description": "I'm a rugby fan. Instead of wondering how future results will effect the Rugby World Rankings, I decided to figure out the calculation used for the rankings, and designed a web app that allows you to predict future results and show you the updated rankings."
         },
         "boom": {
           "title": "Boom",
-          "description": "I love video games. I read about the algorithm used to created the pseudo 3d graphics in the game Wolfenstein 3D. I decided to implement my own version in Javascript. Over time it's grown into almost a full game. It's not finished yet by I'll get there."
+          "description": "I love video games. I read about the algorithm used to create the pseudo 3D graphics in the game Wolfenstein 3D. I implemented my own version in Javascript. Over time it's grown into almost a full game. It's not finished yet by I'll get there."
         }
       }
     },
