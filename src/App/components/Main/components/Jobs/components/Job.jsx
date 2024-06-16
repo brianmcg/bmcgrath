@@ -4,14 +4,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import Divider from '@mui/material/Divider';
 import CircleIcon from '@mui/icons-material/Circle';
 
 const ExpandMore = styled((props) => {
@@ -68,9 +66,9 @@ export default function Job({ title, time, location, detail, skills }) {
           {detail.map((p, i) => <Typography key={i} paragraph>{p}</Typography>)}
         </CardContent>
         <CardContent>
-          <Stack direction="row" spacing={1}>
-            {skills.map((skill, i) => <Chip color="secondary" key={i} label={skill} />)}
-          </Stack>
+          <Grid container spacing={1}>
+            {skills.map((skill, i) => <Grid item key={i}><Chip color="secondary" label={skill} /></Grid>)}
+          </Grid>
         </CardContent>
       </Collapse>
 
