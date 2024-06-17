@@ -15,7 +15,7 @@ const skills = [{
   title: <Translate text="app.root.main.skills.libraries.title" />,
   description: <Translate text="app.root.main.skills.libraries.description" />,
   icon: <CodeIcon fontSize="large" />,
-  items: ['React', 'Next.js', 'Backbone.js', 'D3.js', 'Node.js', 'Pixi.js', 'Highcharts.js', 'Ruby on Rails'],
+  items: ['React', 'Next.js', 'Backbone.js', 'D3.js', 'Node.js', 'Pixi.js', 'Highcharts.js', 'Ruby on Rails', 'Stimulus.js'],
 }, {
   title: <Translate text="app.root.main.skills.tools.title" />,
   icon: <ComputerIcon fontSize="large" />,

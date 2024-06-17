@@ -12,7 +12,7 @@ const jobs = [{
     <Translate key="p2" text="app.root.main.jobs.edge.p2" />,
     <Translate key="p3" text="app.root.main.jobs.edge.p3" />,
   ],
-  skills: ['Javascript', 'HTML', 'CSS', 'Ruby on Rails', 'Backbone', 'Angular', 'React', 'MySQL'],
+  skills: ['Javascript', 'HTML', 'CSS', 'Ruby on Rails', 'Backbone', 'Angular', 'React', 'MySQL', 'Stimulus.js'],
 }, {
   title: <Translate text="app.root.main.jobs.ericsson.title" />,
   time: '2013 - 2016',
