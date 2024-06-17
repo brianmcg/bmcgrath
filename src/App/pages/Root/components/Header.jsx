@@ -1,17 +1,12 @@
 
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Translate from '@components/Translate';
-import EmailIcon from '@mui/icons-material/Email';
 
 import desktopSrc from '@assets/images/desktop.svg';
-import logoSrc from '@assets/images/logo-primary.svg';
-// import avatarSrc from '@assets/images/avatar.jpg';
+import avatarSrc from '@assets/images/avatar.jpg';
 
 export default function Header() {
   const headingStyle = {
@@ -23,6 +18,7 @@ export default function Header() {
 
   const matches = useMediaQuery('(min-width:600px)');
   const imageStyle = matches ? { width: 512, height: 240 } : { width: 256, height: 120 };
+  const avatartStyle = matches ? { width: 200, height: 200 } : { width: 100, height: 100 };
 
   return (
     <main>
@@ -40,7 +36,7 @@ export default function Header() {
             <Translate text="app.root.header.description" />
           </Typography>
         </Box>
-        {/*<img src={avatarSrc} alt="Avatar" style={{ borderRadius: '50%' }} />*/}
+        <img src={avatarSrc} alt="Avatar" style={{ ...avatartStyle, borderRadius: '50%' }} />
         <img src={desktopSrc} alt="Programming" style={imageStyle}/>
       </Stack>
     </main>
