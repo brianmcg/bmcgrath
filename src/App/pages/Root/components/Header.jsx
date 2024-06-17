@@ -26,22 +26,6 @@ export default function Header() {
 
   return (
     <main>
-      <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" pt={4}>
-          <Link href="/">
-            <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48 }} />
-          </Link>
-          <Link href="/contact">
-            <Button
-              variant="outlined"
-              type="submit"
-              startIcon={<EmailIcon />}
-            >
-              <Translate text="app.root.header.contact" />
-            </Button>
-          </Link>
-        </Stack>
-      </Container>
       <Stack sx={headingStyle} spacing={4}>
         <Box sx={{ mb: 0 }}>
           <Typography

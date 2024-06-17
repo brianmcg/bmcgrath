@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
@@ -15,35 +14,6 @@ const MAILJET_URL = 'https://api.mailjet.com/v3/send';
 const API_KEY = 'b94e3d4204e43a7b3b7116e8f2e16646';
 const SECRET_KEY = 'bc76aa2d6eeb3e2be1c3e3998b59a5c0';
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function sendEmail(name, email, message) {
-  const data = JSON.stringify({
-    'FromEmail': email,
-    'FromName': name,
-    'Recipients': [{
-      'Email': MY_EMAIL,
-      'Name': MY_NAME,
-    }],
-    'Subject': SUBJECT,
-    'Text-part': message,
-  });
-
-  const config = {
-    method: 'post',
-    url: MAILJET_URL,
-    data: data,
-    headers: { 'Content-Type': 'application/json' },
-    auth: { username: API_KEY, password: SECRET_KEY },
-  };
-
-  return axios(config)
-    .then(function (response) {
-      console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
 
 function validateName(name) {
   return Boolean(name) && name.length > 0;
@@ -89,7 +59,7 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    sendEmail(name, email, message);
+    // sendEmail(name, email, message);
     navigateTo('/');
   }
 
