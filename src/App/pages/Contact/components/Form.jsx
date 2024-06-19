@@ -1,43 +1,46 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import Translate from '@components/Translate';
+import { SEND_MAIL_URL } from '@constants/urls';
 
-const MY_EMAIL = 'brian.joseph.mcgrath@gmail.com';
-const MY_NAME = 'Brian McGrath';
-const SUBJECT = 'Message from bmcgrath.net';
-const MAILJET_URL = 'https://api.mailjet.com/v3/send';
-const API_KEY = 'b94e3d4204e43a7b3b7116e8f2e16646';
-const SECRET_KEY = 'bc76aa2d6eeb3e2be1c3e3998b59a5c0';
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validateName(name) {
   return Boolean(name) && name.length > 0;
 }
 
-function validateEmail(email) {
-  return EMAIL_REGEX.test(email);
+function validateAddress(address) {
+  return EMAIL_REGEX.test(address);
 }
 
 function validateMessage(message) {
   return Boolean(message) && message.length > 0;
 }
 
-export default function Form() {
-  const navigateTo = useNavigate();
+async function sendEmail(email) {
+  try {
+    const response = axios.post(SEND_MAIL_URL, { email });
 
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export default function Form() {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
   const [message, setMessage] = useState('');
   const [nameError, setNameError] = useState(false);
-  const [emailError, setEmailError] = useState(false);
+  const [addressError, setAddressError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
-  const isSubmitDisabled = !(validateName(name) && validateEmail(email) && validateMessage(message));
+  const isSubmitDisabled = !(validateName(name) && validateAddress(address) && validateMessage(message));
 
   function handleChangeName(e) {
     const name = e.target.value;
@@ -45,10 +48,10 @@ export default function Form() {
     setName(name);
   }
 
-  function handleChangeEmail(e) {
-    const email = e.target.value;
-    setEmail(email);
-    setEmailError(!validateEmail(email));
+  function handleChangeAddress(e) {
+    const address = e.target.value;
+    setAddress(address);
+    setAddressError(!validateAddress(address));
   }
 
   function handleChangeMessage(e) {
@@ -59,8 +62,8 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // sendEmail(name, email, message);
-    navigateTo('/');
+    sendEmail({ name, address, message });
+    // navigateTo('/');
   }
 
   return (
@@ -80,14 +83,14 @@ export default function Form() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            id="email"
+            id="address"
             label=<Translate text="app.contact.email" />
-            error={emailError}
-            helperText={ emailError ? <Translate text="app.contact.errors.email" /> : ' ' }
+            error={addressError}
+            helperText={ addressError ? <Translate text="app.contact.errors.address" /> : ' ' }
             autoComplete="off"
             required
             fullWidth
-            onChange={handleChangeEmail}
+            onChange={handleChangeAddress}
           />
         </Grid>
         <Grid item xs={12}>

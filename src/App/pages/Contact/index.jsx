@@ -6,6 +6,8 @@ import Link from '@mui/material/Link';
 import ClearIcon from '@mui/icons-material/Clear';
 import Translate from '@components/Translate';
 import Form from './components/Form';
+import { HOME_ROUTE } from '@constants/routes';
+
 import logoSrc from '@assets/images/logo-primary.svg';
 import avatarSrc from '@assets/images/avatar.jpg';
 
@@ -14,10 +16,10 @@ export default function Contact() {
     <>
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" pt={4}>
-          <Link href="/">
+          <Link href={HOME_ROUTE}>
             <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48 }} />
           </Link>
-          <Link href="/">
+          <Link href={HOME_ROUTE}>
             <ClearIcon color="primary" sx={{ height: 32, width: 32 }} />
           </Link>
         </Stack>
