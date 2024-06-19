@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 export default function Message({ icon, text }) {
   return (
     <Container>
-      <Stack direction="row" spacing={1} alignItems="center" justifyContent="center"  mt={4} mb={4}>
+      <Stack direction="row" spacing={1} alignItems="center" justifyContent="center"  mt={8} mb={4}>
         {icon}
-        <Typography variant="h6">{text}</Typography>
+        {text ? <Typography variant="h6">{text}</Typography> : null}
       </Stack>
     </Container>
   );

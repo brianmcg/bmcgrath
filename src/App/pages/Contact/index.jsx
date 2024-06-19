@@ -7,35 +7,30 @@ import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import ClearIcon from '@mui/icons-material/Clear';
 import RefreshIcon from '@mui/icons-material/Refresh';
-import Translate from '@components/Translate';
+import CircularProgress from '@mui/material/CircularProgress';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
+import Translate from '@components/Translate';
 import { HOME_ROUTE, CONTACT_ROUTE } from '@constants/routes';
 import { SEND_MAIL_URL } from '@constants/urls';
 import Form from './components/Form';
 import Message from './components/Message';
+
 import logoSrc from '@assets/images/logo-primary.svg';
 import avatarSrc from '@assets/images/avatar.jpg';
 
-const STATES = { SUCCESS: 'success', ERROR: 'error' };
+const STATES = { PENDING: 'pending', SUCCESS: 'success', ERROR: 'error' };
 
 function renderContent(state, onSubmit) {
   switch(state) {
   case STATES.SUCCESS: {
-    return (
-      <Message
-        icon={<CheckCircleIcon color="success" />}
-        text={<Translate text="app.contact.success" />}
-      />
-    );
+    return <Message icon={<CheckCircleIcon color="success" />} text={<Translate text="app.contact.success" />} />;
   }
   case STATES.ERROR: {
-    return (
-      <Message
-        icon={<ErrorIcon color="error" />}
-        text={<Translate text="app.contact.error" />}
-      />
-    );
+    return <Message icon={<ErrorIcon color="error" />} text={<Translate text="app.contact.error" />} />;
+  }
+  case STATES.PENDING: {
+    return <Message icon={<CircularProgress />} />;
   }
   default: return <Form onSubmit={onSubmit} />;
   }
@@ -45,6 +40,8 @@ export default function Contact() {
   const [status, setStatus] = useState(null);
 
   async function sendEmail(email) {
+    setStatus(STATES.PENDING);
+
     try {
       await axios.post(SEND_MAIL_URL, { email });
       setStatus(STATES.SUCCESS);
