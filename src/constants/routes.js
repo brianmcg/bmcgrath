@@ -1,3 +1,3 @@
-export const HOME_ROUTE = '/home';
+export const HOME_ROUTE = '/';
 
-export const CONTACT_ROUTE = `${HOME_ROUTE}/contact`;
+export const CONTACT_ROUTE = '/contact';

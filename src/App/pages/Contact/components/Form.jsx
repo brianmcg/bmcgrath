@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import axios from 'axios';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import Translate from '@components/Translate';
-import { SEND_MAIL_URL } from '@constants/urls';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -22,17 +20,7 @@ function validateMessage(message) {
   return Boolean(message) && message.length > 0;
 }
 
-async function sendEmail(email) {
-  try {
-    const response = axios.post(SEND_MAIL_URL, { email });
-
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-export default function Form() {
+export default function Form({ onSubmit }) {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [message, setMessage] = useState('');
@@ -62,8 +50,7 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    sendEmail({ name, address, message });
-    // navigateTo('/');
+    onSubmit({ name, address, message });
   }
 
   return (
@@ -74,7 +61,7 @@ export default function Form() {
             id="name"
             label=<Translate text="app.contact.name" />
             error={nameError}
-            helperText={ nameError ? <Translate text="app.contact.errors.common" /> : ' ' }
+            helperText={ nameError ? <Translate text="app.contact.form.errors.common" /> : ' ' }
             autoComplete="off"
             required
             fullWidth
@@ -86,7 +73,7 @@ export default function Form() {
             id="address"
             label=<Translate text="app.contact.email" />
             error={addressError}
-            helperText={ addressError ? <Translate text="app.contact.errors.address" /> : ' ' }
+            helperText={ addressError ? <Translate text="app.contact.form.errors.address" /> : ' ' }
             autoComplete="off"
             required
             fullWidth
@@ -98,7 +85,7 @@ export default function Form() {
             id="message"
             label=<Translate text="app.contact.message" />
             error={messageError}
-            helperText={ messageError ? <Translate text="app.contact.errors.common" /> : ' ' }
+            helperText={ messageError ? <Translate text="app.contact.form.errors.common" /> : ' ' }
             autoComplete="off"
             rows={4}
             multiline

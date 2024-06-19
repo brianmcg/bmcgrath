@@ -81,9 +81,13 @@
       "email": "Email",
       "message": "Message",
       "submit": "Submit",
-      "errors": {
-        "common": "Please fill out this field.",
-        "email": "Please nter a valid email address."
+      "success": "Email sent successfully",
+      "error": "Failed to send email",
+      "form": {
+        "errors": {
+          "common": "Please fill out this field.",
+          "address": "Please nter a valid email address."
+        }
       }
     }
   }
