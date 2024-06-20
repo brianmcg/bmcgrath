@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import { useState, forwardRef } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
@@ -20,7 +21,7 @@ function validateMessage(message) {
   return Boolean(message) && message.length > 0;
 }
 
-export default function Form({ onSubmit }) {
+const Form = forwardRef(function Form({ onSubmit }, ref) {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [message, setMessage] = useState('');
@@ -48,13 +49,19 @@ export default function Form({ onSubmit }) {
     setMessageError(!validateMessage(message));
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit(e) {
+    e.preventDefault();
     onSubmit({ name, address, message });
   }
 
+  function handleReset() {
+    setNameError(false);
+    setAddressError(false);
+    setMessageError(false);
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} ref={ref} onReset={handleReset}>
       <Grid container spacing={3} alignItems="center" justifyContent="space-between" mt={4} mb={4}>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -110,4 +117,6 @@ export default function Form({ onSubmit }) {
       </Grid>
     </form>
   );
-}
+});
+
+export default Form;

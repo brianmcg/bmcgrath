@@ -5,6 +5,10 @@ const auth = {
   password: import.meta.env.VITE_API_PASS,
 };
 
-export const get = url => axios.get(url, { auth });
+export function get(path) {
+  return axios.get(`${import.meta.env.VITE_API_URL}/${path}`, { auth });
+}
 
-export const post = (url, body) => axios.post(url, body, { auth });
+export function post(path, body) {
+  return axios.post(`${import.meta.env.VITE_API_URL}/${path}`, body, { auth });
+}

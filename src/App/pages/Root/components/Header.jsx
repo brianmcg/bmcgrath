@@ -1,14 +1,14 @@
+import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
+import MuiLink from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Translate from '@components/Translate';
 import EmailIcon from '@mui/icons-material/Email';
 import { HOME_ROUTE, CONTACT_ROUTE } from '@constants/routes';
-
 import desktopSrc from '@assets/images/desktop.svg';
 import avatarSrc from '@assets/images/avatar.jpg';
 import logoSrc from '@assets/images/logo-primary.svg';
@@ -29,18 +29,17 @@ export default function Header() {
     <header>
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" pt={4}>
-          <Link href={HOME_ROUTE}>
+          <MuiLink href={HOME_ROUTE}>
             <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48 }} />
-          </Link>
-          <Link href={CONTACT_ROUTE}>
-            <Button
-              variant="outlined"
-              sx={{ borderRadius: 50 }}
-              startIcon={<EmailIcon />}
-            >
-              <Translate text="app.root.header.contact" />
-            </Button>
-          </Link>
+          </MuiLink>
+          <Button
+            component={Link} to={CONTACT_ROUTE}
+            variant="outlined"
+            sx={{ borderRadius: 50 }}
+            startIcon={<EmailIcon />}
+          >
+            <Translate text="app.root.header.contact" />
+          </Button>
         </Stack>
       </Container>
       <Stack sx={headingStyle} spacing={4}>
