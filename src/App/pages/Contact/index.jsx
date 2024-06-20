@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
@@ -12,7 +11,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 import Translate from '@components/Translate';
 import { HOME_ROUTE, CONTACT_ROUTE } from '@constants/routes';
-import { SEND_MAIL_URL } from '@constants/urls';
+import { post } from '@utils/api';
 import Form from './components/Form';
 import Message from './components/Message';
 
@@ -43,7 +42,7 @@ export default function Contact() {
     setStatus(STATES.PENDING);
 
     try {
-      await axios.post(SEND_MAIL_URL, { email });
+      await post(`${import.meta.env.VITE_API_URL}/emails/send`, { email });
       setStatus(STATES.SUCCESS);
     } catch (error) {
       setStatus(STATES.ERROR);
