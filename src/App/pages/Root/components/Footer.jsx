@@ -10,23 +10,25 @@ import { useTheme } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import ArticleIcon from '@mui/icons-material/Article';
 import Translate from '@components/Translate';
-
+import { LINKEDIN_URL, GITHUB_URL } from '@constants/urls';
 import logoSrc from '@assets/images/logo-white.svg';
 
 const email = 'brian.joseph.mcgrath@gmail.com';
 
+const cvUrl = '/CV.pdf';
+
 const options = [{
   icon: <LinkedInIcon />,
-  label: 'app.root.footer.linkedin',
-  href: 'https://www.linkedin.com/in/brianjmcgrath/',
+  label: <Translate text="app.root.footer.linkedin" />,
+  href: LINKEDIN_URL,
 }, {
   icon: <GitHubIcon />,
-  label: 'app.root.footer.github',
-  href: 'https://github.com/brianmcg',
+  label: <Translate text="app.root.footer.github" />,
+  href: GITHUB_URL,
 }, {
   icon: <ArticleIcon />,
-  label: 'app.root.footer.cv',
-  href: '/CV_Brian_McGrath.pdf',
+  label: <Translate text="app.root.footer.cv" />,
+  href: cvUrl,
 }];
 
 function renderOption({ icon, label, href, hoverColor, target = '_blank' }) {
@@ -46,9 +48,7 @@ function renderOption({ icon, label, href, hoverColor, target = '_blank' }) {
     <Link key={href} sx={linkStyle} href={href} target={target} color="inherit">
       <Stack direction="row" alignItems="center" gap={1}>
         {icon}
-        <Typography variant="caption">
-          <Translate text={label} />
-        </Typography>
+        <Typography variant="caption">{label}</Typography>
       </Stack>
     </Link>
   );
