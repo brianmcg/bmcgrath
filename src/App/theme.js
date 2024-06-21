@@ -4,7 +4,7 @@ export const PRIMARY = '#6e07f3';
 
 export const SECONDARY = '#5be9b9';
 
-export const BACKGROUND = '#ffffff'; // '#e6e7eb';
+export const BACKGROUND = '#ffffff';
 
 export const INFO = '#00917b';
 
