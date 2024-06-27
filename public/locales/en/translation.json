@@ -81,12 +81,12 @@
       "email": "Email",
       "message": "Message",
       "submit": "Submit",
-      "success": "Email sent successfully",
-      "error": "Failed to send email",
+      "success": "Message sent",
+      "error": "Failed to send message",
       "form": {
         "errors": {
           "common": "Please fill out this field.",
-          "address": "Please nter a valid email address."
+          "address": "Please enter a valid email address."
         }
       }
     }
