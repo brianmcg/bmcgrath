@@ -1,4 +1,3 @@
 #!/bin/bash
 
-scp -rp dist/* bm:~/www/
-scp -p .env bm:~/www/
+scp -rp dist/* dist/.* .env bm:~/www/
