@@ -52,7 +52,7 @@ export default function Contact() {
     setStatus(STATES.PENDING);
 
     try {
-      await post('emails/send', { email });
+      await post('posts', email);
       setStatus(STATES.SUCCESS);
     } catch (error) {
       setStatus(STATES.ERROR);
