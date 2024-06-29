@@ -107,7 +107,6 @@ const Form = forwardRef(function Form({ onSubmit }, ref) {
               disabled={isSubmitDisabled}
               variant="outlined"
               type="submit"
-              sx={{ borderRadius: 50 }}
               startIcon={<SendIcon />}
             >
               <Translate text="app.contact.submit" />

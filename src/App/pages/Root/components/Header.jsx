@@ -35,7 +35,6 @@ export default function Header() {
           <Button
             component={Link} to={CONTACT_ROUTE}
             variant="outlined"
-            sx={{ borderRadius: 50 }}
             startIcon={<EmailIcon />}
           >
             <Translate text="app.root.header.contact" />
