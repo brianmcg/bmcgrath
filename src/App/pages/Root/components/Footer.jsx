@@ -48,7 +48,7 @@ function renderOption({ icon, label, href, hoverColor, target = '_blank' }) {
     <Link key={href} sx={linkStyle} href={href} target={target} color="inherit">
       <Stack direction="row" alignItems="center" gap={1}>
         {icon}
-        <Typography variant="subtitle2">{label}</Typography>
+        <Typography variant="text">{label}</Typography>
       </Stack>
     </Link>
   );

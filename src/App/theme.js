@@ -50,6 +50,9 @@ const theme = createTheme({
       fontWeight: 500,
       fontSize: '1.5rem',
     },
+    text: {
+      fontSize: '0.875rem',
+    },
   },
   palette: {
     mode: 'light',
