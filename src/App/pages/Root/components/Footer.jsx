@@ -48,7 +48,7 @@ function renderOption({ icon, label, href, hoverColor, target = '_blank' }) {
     <Link key={href} sx={linkStyle} href={href} target={target} color="inherit">
       <Stack direction="row" alignItems="center" gap={1}>
         {icon}
-        <Typography variant="caption">{label}</Typography>
+        <Typography variant="subtitle2">{label}</Typography>
       </Stack>
     </Link>
   );
@@ -71,7 +71,7 @@ export default function Footer() {
         <Container>
           <Stack justifyContent="center" alignItems="center" spacing={6}>
             <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48, opacity: 0.75 }} />
-            <Typography align="center" variant="h6" sx={{ opacity: 0.75, fontSize: { xs: 16, sm: 20 } }}>
+            <Typography align="center" variant="caption" sx={{ opacity: 0.75, fontSize: { xs: 16, sm: 20 } }}>
               <Translate text="app.root.footer.title" />
             </Typography>
             <Box>

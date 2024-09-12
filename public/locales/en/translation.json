@@ -33,6 +33,7 @@
         },
         "jobs": {
           "title": "Professional Experience",
+          "expand": "Expand",
           "ericsson": {
             "title": "Software Engineer @ Ericsson",
             "location": "Athlone, Ireland",

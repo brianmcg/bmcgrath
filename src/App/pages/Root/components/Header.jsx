@@ -42,7 +42,7 @@ export default function Header() {
         </Stack>
       </Container>
       <Stack sx={headingStyle} spacing={4}>
-        <Box sx={{ mb: 0 }}>
+        <Box sx={{ mb: 0, textAlign: 'center' }}>
           <Typography
             color="inherit"
             variant="h1"
@@ -51,7 +51,7 @@ export default function Header() {
           >
             <Translate text="app.root.header.title" />
           </Typography>
-          <Typography color="inherit" variant="h5" align="center">
+          <Typography color="inherit" variant="caption" align="center">
             <Translate text="app.root.header.description" />
           </Typography>
         </Box>

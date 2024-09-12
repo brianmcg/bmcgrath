@@ -14,7 +14,7 @@ export default function Project({ title, icon, description, url }) {
       <CardContent sx={{display: 'flex', justifyContent: 'center' }}>
         <Stack direction="row" spacing={1} alignItems="center" justifyContent="center">
           {icon}
-          <Typography variant="h5">{title}</Typography>
+          <Typography variant="h4">{title}</Typography>
         </Stack>
       </CardContent>
 

@@ -25,7 +25,7 @@ export default function Profile() {
           <Typography
             gutterBottom
             color="inherit"
-            variant="h3"
+            variant="h2"
             align="center"
             sx={{ fontSize: { xs: 32, sm: 40, md: 48 }}}
           >

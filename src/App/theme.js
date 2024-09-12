@@ -46,6 +46,10 @@ const theme = createTheme({
     body2: {
       fontWeight: 300,
     },
+    caption: {
+      fontWeight: 500,
+      fontSize: '1.5rem',
+    },
   },
   palette: {
     mode: 'light',

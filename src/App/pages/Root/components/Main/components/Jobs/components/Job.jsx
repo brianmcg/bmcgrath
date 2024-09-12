@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -13,11 +14,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CircleIcon from '@mui/icons-material/Circle';
 
 const ExpandMore = styled((props) => {
-  const { onClick, children, className } = props;
+  const { onClick, children, className, label } = props;
   return (<IconButton
     sx={{ color: 'primary.main', margin: 'auto' }}
     className={className}
     onClick={onClick}
+    aria-label={label}
   >
     {children}
   </IconButton>);
@@ -32,6 +34,7 @@ const ExpandMore = styled((props) => {
 export default function Job({ title, time, location, detail, skills }) {
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => setExpanded(!expanded);
+  const { t } = useTranslation();
 
   return (
     <Card elevation={3}>
@@ -43,13 +46,13 @@ export default function Job({ title, time, location, detail, skills }) {
           spacing={1}
         >
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} alignItems="center" justifyContent="center">
-            <Typography align="center" sx={{ fontSize: { xs: 16, md: 20 }}} variant="h6">
+            <Typography align="center" sx={{ fontSize: { xs: 16, md: 20 }}} variant="caption">
               {title}
             </Typography>
             <CircleIcon color="secondary" sx={{ fontSize: { xs: 8, md: 16 } }} />
-            <Typography align="center" sx={{ fontSize: { xs: 16, md: 20 }}} variant="h6">{time}</Typography>
+            <Typography align="center" sx={{ fontSize: { xs: 16, md: 20 }}} variant="caption">{time}</Typography>
           </Stack>
-          <ExpandMore expand={expanded} onClick={handleExpandClick}>
+          <ExpandMore expand={expanded} onClick={handleExpandClick} label={t('app.root.main.jobs.expand')}>
             <ExpandMoreIcon />
           </ExpandMore>
         </Stack>
