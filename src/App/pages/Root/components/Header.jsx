@@ -32,13 +32,13 @@ export default function Header() {
           <MuiLink href={HOME_ROUTE}>
             <img src={logoSrc} alt="Logo" style={{ height: 48, width: 48 }} />
           </MuiLink>
-          <Button
+        {/*  <Button
             component={Link} to={CONTACT_ROUTE}
             variant="outlined"
             startIcon={<EmailIcon />}
           >
             <Translate text="app.root.header.contact" />
-          </Button>
+          </Button>*/}
         </Stack>
       </Container>
       <Stack sx={headingStyle} spacing={4}>
