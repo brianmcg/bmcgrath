@@ -14,8 +14,8 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <I18nextProvider i18n={i18n}>
         <ParallaxProvider>
+          <CssBaseline/>
           <BrowserRouter>
-            <CssBaseline/>
             <Routes>
               <Route path={HOME_ROUTE} element={<Root/>} />
               <Route path={CONTACT_ROUTE} element={<Contact/>} />
